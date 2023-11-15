@@ -20,5 +20,12 @@ class UserSeeder extends Seeder
         ]);
 
         $admin->assignRole('admin');
+
+        $admin->userDetail()->create([
+            'user_id' => $admin->id,
+            'date_of_birth' => '2000-01-01',
+            'phone_number' => '082134561424',
+            'address' => 'Karanganyar Regency, Central Java, Indonesia'
+        ]);
     }
 }
